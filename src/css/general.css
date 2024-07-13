@@ -1,0 +1,92 @@
+:root {
+    --red: #DF2042;
+    --blue: #0d6efd;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+
+@font-face {
+    font-family: "Karla";
+    src: url("../fonts/Karla-Light.ttf");
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Poppins";
+}
+
+a, p {
+    font-family: "Karla";
+}
+
+/* The side navigation menu */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+.footer {
+   display: flex;
+   flex-direction: row;
+   margin-top: 5%;
+   margin-bottom: 1%;
+}
+
+.footer p, a {
+    margin-right: 5px;
+    font-size: 17px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--blue);
+}
+
+.footer a:visited {
+    color: var(--blue);
+}
+
+i {
+    color: black;
+}
