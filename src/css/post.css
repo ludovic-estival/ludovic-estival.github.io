@@ -1,0 +1,12 @@
+.home-box .categories {
+    display: flex;
+    flex-direction: row;
+}
+
+.home-box .categories span {
+    margin-right: 5px;
+}
+
+p {
+    font-size: 20px;
+}

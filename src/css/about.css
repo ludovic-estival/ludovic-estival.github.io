@@ -1,0 +1,8 @@
+.aboutme {
+    display: flex;
+    flex-direction: row;
+}
+
+.aboutme p {
+    margin-left: 20px;
+}
