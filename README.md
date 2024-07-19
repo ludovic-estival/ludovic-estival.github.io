@@ -1,14 +1,32 @@
 # My blog about metal
 
+## Requirements
+
+Python and the dependencies in `requirements.txt`.
+
 ## Add a new post
 
-- create the post in blog folder and add it to the `all.html` corresponding
-- add to the corresponding categorie(s)
-- add to `index.html` and remove the oldest one
+- create JSON data (see below) for the post in the proper folder : `blog/[year]/[month]/[day].json`
+- from `src/python` run `python new_post.py [date]` to create the post. In instance `python new_post.py 2024/07/19`.
+    This will create:
+    - the post : `[day].html` that you can move in the same directory as the previous JSON file
+    - the post card that you can copy/paste in the `all.html` corresponding and in all relevant categories
+    - the index card that you can copy/paste in `index.html`
 
-## Pictures
+## JSON data of a post
 
-- add a link rather than download the picture
-- all the picture needs to have the same size
-- `index.html`: 400x200
-- `posts.html` and `categories.html`: 200x200
+The name of the file must the day of the post, like `19.js`.
+
+Example of JSON file, all fields are required:
+
+```json
+{
+    "name": "19",
+    "title": "Mes albums préférés",
+    "date": "19 juillet 2024",
+    "description": "Je vous présente mes albums préférés.",
+    "link": "https://ludovic-estival.github.io/blog/2024/07/19.html",
+    "categories": ["Black", "Speed", "Goregrind"],
+    "image": "19-07-2024.png"
+}
+```

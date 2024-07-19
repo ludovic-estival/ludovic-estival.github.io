@@ -4,13 +4,9 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Titre de l'article | Blog metal</title>
+    <title>Goregrind | Blog metal</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' href='../../../src/css/general.css'>
-    <link rel='stylesheet' type='text/css' href='../../../src/css/post.css'>
-    <!-- A Changer 
-    <link rel='stylesheet' type='text/css' href='src/css/index.css'>
-    -->
+    <link rel='stylesheet' type='text/css' href='../../src/css/general.css'>
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -26,10 +22,10 @@
             <!-- The side navigation menu -->
             <div id="mySidenav" class="sidenav ml-5">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
-                <a href="../../../index.html">Accueil</a>
-                <a href="#">Posts</a>
-                <a href="#">Catégories</a>
-                <a href="#">A propos</a>
+                <a href="../../index.html">Accueil</a>
+                <a href="../posts.html">Posts</a>
+                <a href="../categories.html">Catégories</a>
+                <a href="../about.html">A propos</a>
             </div>
             <h1><i class="fa-solid fa-bars" data-bs-toggle="tooltip" title="Navigation" onclick="openNav()"></i></h1>
         </div>
@@ -39,59 +35,70 @@
             <h1>Un blog sur le metal</h1>
             <h3>par Ludovic Estival</h3>
         </div>
+
         <div class="col-sm-3">
         </div>
     </div>
 
-    <!-- Box -->
     <div class="row mb-5">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
             <div class="home-box">
-                <h2>Titre du post</h2>
-                <p>14 juillet 2024</p>
-                <div class="categories mt-2">
-                    <span class="badge bg-success">Catégorie 1</span>
-                    <span class="badge bg-success">Catégorie 2</span>
-                </div>
+                <p><strong>Goregrind</strong></p>
             </div>
         </div>
         <div class="col-sm-3"></div>
     </div>
 
-    <!-- Post content -->
     <div class="row">
-        <div class="col-sm-3"></div>
+        <div class="col-sm-1"></div>
         <div class="col-sm-6">
-            <p>Contenu</p>
-            <p>Contenu</p>
-            <p>Contenu</p>
-            <p>Contenu</p>
-            <p>Contenu</p>
-            <img src="../../../src/images/dummy-picture-600-400.png">
-            <p>Contenu</p>
-            <p>Contenu</p>
-            <p>Contenu</p>
-            <p>Contenu</p>
-            <p>Contenu</p>
+           <!-- buttons --> 
         </div>
-        <div class="col-sm-3"></div>
+        <div class="col-sm-1"></div>
     </div>
 
-     <!-- Footer -->
-     <div class="row">
+    <!-- 2024 posts line 1 -->
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-4">
+            <!-- Post 1 -->
+            <div class="post" onclick="window.location='https://ludovic-estival.github.io/blog/2024/07/19.html';">
+    
+                <h4> Mes albums préférés <span class="date"> - 19 juillet 2024</span></h4>
+                
+                <div class="categories mb-2">    
+                    <span class="badge bg-success">Black</span>
+                    <span class="badge bg-success">Speed</span>
+                    <span class="badge bg-success">Goregrind</span>
+                </div>
+            
+                <div class="post-content">
+                    <img src="../../src/images/19-07-2024.png" class="rounded" alt="Post image">
+                    <p>Je vous présente mes albums préférés.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+           <!-- Post 2 --> 
+        </div>
+        <div class="col-sm-2"></div>
+    </div>
+
+    <!-- Footer -->
+    <div class="row">
         <div class="col-sm-3"></div>
-        <div class="col-sm-8 footer">
+        <div class="col-sm-8 footer mt-5">
             <p>Un blog sur le metal par Ludovic Estival</p>
-            <a href="../../../index.html">- Accueil</a>
-            <a>- Posts</a>
-            <a>- Catégories</a>
-            <a>- A propos</a>
+            <a href="../../index.html">- Accueil</a>
+            <a href="../posts.html">- Posts</a>
+            <a href="../categories.html">- Catégories</a>
+            <a href="../about.html">- A propos</a>
             <a href="https://github.com/ludovic-estival"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.linkedin.com/in/ludovic-estival-a7bb5224b/"><i class="fa-brands fa-linkedin"></i></a>
         </div>
         <div class="col-sm-2"></div>
     </div>
 </body>
-<script src="../../../src/js/general.js"></script>
+<script src="../../src/js/general.js"></script>
 </html>

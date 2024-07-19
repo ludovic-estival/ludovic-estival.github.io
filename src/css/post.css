@@ -10,3 +10,26 @@
 p {
     font-size: 20px;
 }
+
+img {
+   margin-bottom: 1%; 
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.large-img {
+    width: 50%;
+    height: auto;
+}
+
+.medium-img {
+    width: 70%;
+    height: auto;
+}
+
+.censor {
+    filter: blur(10px);
+}

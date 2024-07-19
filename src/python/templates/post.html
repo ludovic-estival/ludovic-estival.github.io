@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Titre de l'article | Blog metal</title>
+    <title>{{ title }} | Blog metal</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' href='../../../src/css/general.css'>
     <link rel='stylesheet' type='text/css' href='../../../src/css/post.css'>
@@ -48,11 +48,12 @@
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
             <div class="home-box">
-                <h2>Titre du post</h2>
-                <p>14 juillet 2024</p>
+                <h2>{{ title }}</h2>
+                <p>{{ date }}</p>
                 <div class="categories mt-2">
-                    <span class="badge bg-success">Catégorie 1</span>
-                    <span class="badge bg-success">Catégorie 2</span>
+                    {% for c in categories %}
+                        <span class="badge bg-success">{{ c }}</span>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -63,17 +64,8 @@
     <div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
-            <p>Contenu</p>
-            <p>Contenu</p>
-            <p>Contenu</p>
-            <p>Contenu</p>
-            <p>Contenu</p>
-            <img src="../../../src/images/dummy-picture-600-400.png">
-            <p>Contenu</p>
-            <p>Contenu</p>
-            <p>Contenu</p>
-            <p>Contenu</p>
-            <p>Contenu</p>
+            <p>Introduction</p>
+            <p class="section-title">Section 1</p>
         </div>
         <div class="col-sm-3"></div>
     </div>
