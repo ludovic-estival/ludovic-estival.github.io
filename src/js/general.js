@@ -1,7 +1,7 @@
 /* Append common elements */
 
 function addIndexNav() {
-    const body = document.getElementById("body").innerHTML +=
+    document.getElementById("body").innerHTML +=
     `<div class="col-sm-3">
     <div id="mySidenav" class="sidenav ml-5">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
@@ -14,7 +14,7 @@ function addIndexNav() {
     </div>
     `;
 
-    const footer = document.getElementById("footer").innerHTML +=
+    document.getElementById("footer").innerHTML +=
     `<div class="col-sm-3"></div>
         <div class="col-sm-8 footer mt-5">
             <p>Un blog sur le metal par Ludovic Estival</p>
@@ -30,7 +30,7 @@ function addIndexNav() {
 }
 
 function addCategAboutPostNav() {
-    const body = document.getElementById("body").innerHTML +=
+    document.getElementById("body").innerHTML +=
     `<div class="col-sm-3">
     <div id="mySidenav" class="sidenav ml-5">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
@@ -43,7 +43,7 @@ function addCategAboutPostNav() {
     </div>
     `;
 
-    const footer = document.getElementById("footer").innerHTML +=
+    document.getElementById("footer").innerHTML +=
     `<div class="col-sm-3"></div>
         <div class="col-sm-8 footer mt-5">
             <p>Un blog sur le metal par Ludovic Estival</p>
@@ -59,7 +59,7 @@ function addCategAboutPostNav() {
 }
 
 function addAllNav() {
-    const body = document.getElementById("body").innerHTML +=
+    document.getElementById("body").innerHTML +=
     `<div class="col-sm-3">
     <div id="mySidenav" class="sidenav ml-5">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
@@ -72,7 +72,7 @@ function addAllNav() {
     </div>
     `;
 
-    const footer = document.getElementById("footer").innerHTML +=
+    document.getElementById("footer").innerHTML +=
     `<div class="col-sm-3"></div>
         <div class="col-sm-8 footer mt-5">
             <p>Un blog sur le metal par Ludovic Estival</p>
@@ -88,7 +88,7 @@ function addAllNav() {
 }
 
 function addPostNav() {
-    const body = document.getElementById("body").innerHTML +=
+    document.getElementById("body").innerHTML +=
     `<div class="col-sm-3">
     <div id="mySidenav" class="sidenav ml-5">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><i class="fa-solid fa-xmark"></i></a>
@@ -101,7 +101,7 @@ function addPostNav() {
     </div>  
     `;
 
-    const footer = document.getElementById("footer").innerHTML +=
+    document.getElementById("footer").innerHTML +=
     `<div class="col-sm-3"></div>
         <div class="col-sm-8 footer mt-5">
             <p>Un blog sur le metal par Ludovic Estival</p>
@@ -116,8 +116,26 @@ function addPostNav() {
     `;
 }
 
-// Head
-const head = document.getElementById("head").innerHTML +=
+// Balises Google Analytics
+document.getElementById("body").innerHTML +=
+`<!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NP3XX73Z"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+`;
+
+document.getElementById("head").innerHTML +=
+`<!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NP3XX73Z');</script>
+    <!-- End Google Tag Manager -->
+`;
+
+// Librairies
+document.getElementById("head").innerHTML +=
 `<meta charset='utf-8'>
 <meta http-equiv='X-UA-Compatible' content='IE=edge'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
@@ -151,7 +169,7 @@ if (url.includes('index.html')) {
 }
 
 // Page main title  
-const body = document.getElementById("body").innerHTML +=
+document.getElementById("body").innerHTML +=
 `<div class="col-sm-6 mt-5">
     <h1>Un blog sur le metal</h1>
     <h3>par Ludovic Estival</h3>
