@@ -111,7 +111,7 @@ if (url.includes("2024/all.html")) {
     posts = all2024Posts;
 }
 
-if (url.includes("index.html") || url == "https://ludovic-estival.github.io") {
+if (url.includes("index.html") || url == "https://ludovic-estival.github.io/") {
     posts = homePosts;
 }
 
