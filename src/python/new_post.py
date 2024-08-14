@@ -37,32 +37,18 @@ def create_post(arg: str) -> None:
             )
         )
 
-    # --- Post card for index.html, related categories and posts.html --- #
+    # --- Post card to copy and paste in posts.js --- #
 
     template = env.get_template("card.html")
-    with open("out/index-card.html", mode="w", encoding="UTF-8") as f:
+    with open("out/card.html", mode="w", encoding="UTF-8") as f:
         f.write(
             template.render(
                 date=data["date"],
                 title=data["title"],
                 categories=data["categories"],
                 link=data["link"],
-                image="src/images/" + data["image"],
-                description=data["description"],
-                index_card=True
-            )
-        )
-
-    with open("out/post-card.html", mode="w", encoding="UTF-8") as f:
-        f.write(
-            template.render(
-                date=data["date"],
-                title=data["title"],
-                categories=data["categories"],
-                link=data["link"],
-                image="../../src/images/" + data["image"],
-                description=data["description"],
-                index_card=False
+                image=data["image"],
+                description=data["description"]
             )
         )
 

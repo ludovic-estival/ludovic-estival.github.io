@@ -1,18 +1,11 @@
 <div class="post" onclick="window.location='{{ link }}';">
+    <img src="{{ image }}" class="rounded">
     <h4>{{ title }}</h4>
-    <span class="date">{{ date }}</span>
-
     <div class="categories mb-2">
-        {% if index_card %}
-        <span class="badge bg-primary">Nouveau</span>
-        {% endif %}
         {% for c in categories %}
         <span class="badge bg-success">{{ c }}</span>
         {% endfor %}
     </div>
-
-    <div class="post-content">
-        <img src="{{ image }}" class="rounded" alt="Post image">
-        <p>{{ description }}</p>
-    </div>
+    <p>{{ description }}</p>
+    <span class="date">{{ date }}</span>
 </div>
