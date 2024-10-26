@@ -1,23 +1,32 @@
-.home-box .categories {
-    display: flex;
-    flex-direction: row;
-}
-
-.home-box .categories span {
-    margin-right: 5px;
+.home-box img {
+    margin-bottom: 5%;
 }
 
 p {
     font-size: 20px;
+
+    .date {
+        font-style: italic;
+    }
 }
 
 img {
    margin-bottom: 1%; 
 }
 
+.note {
+    display: flex;
+    flex-direction: row;
+}
+
+.foot-note {
+    font-size: 16px;
+}
+
 .section-title {
     font-weight: bold;
     font-size: 25px;
+    margin-top: 5%;
 }
 
 .large-img {

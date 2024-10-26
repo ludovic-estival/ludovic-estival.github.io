@@ -21,14 +21,6 @@ document.getElementById("body").innerHTML +=
     <div class="header-right">
         <button><a href="https://ludovic-estival.github.io/index.html">Accueil</a></button>
         <div class="dropdown">
-            <button>Catégories <i class="fa-solid fa-chevron-down"></i></button>
-            <div class="dropdown-content">
-                <a href="https://ludovic-estival.github.io/blog/categories/black.html">Black Metal</a>
-                <a href="https://ludovic-estival.github.io/blog/categories/speed.html">Speed Metal</a>
-                <a href="https://ludovic-estival.github.io/blog/categories/goregrind.html">Goregrind</a>
-            </div>
-        </div> 
-        <div class="dropdown">
             <button>Posts <i class="fa-solid fa-chevron-down"></i></button>
             <div class="dropdown-content">
                 <a href="https://ludovic-estival.github.io/blog/2024/all.html">2024</a>

@@ -3,9 +3,8 @@
 
 <head id="head">
     <title>{{ title }} | Blog metal</title>
-    <link rel='stylesheet' type='text/css' href='../../../src/css/general.css'>
-    <link rel='stylesheet' type='text/css' href='../../../src/css/post.css'>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel='stylesheet' type='text/css' href='../../src/css/general.css'>
+    <link rel='stylesheet' type='text/css' href='../../src/css/post.css'>
 </head>
 
 <body>
@@ -16,13 +15,16 @@
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
             <div class="home-box">
+                <img src="{{ image }}">
                 <h2>{{ title }}</h2>
-                <p>{{ date }}</p>
-                <div class="categories mt-2">
-                    {% for c in categories %}
-                        <span class="badge bg-success">{{ c }}</span>
-                    {% endfor %}
-                </div>
+                <p class="date">Création : {{ date }} - Dernière mise à jour : {{ date }}</p>
+                {{ rating }}
+                <h4 class="mt-4">Informations générales</h4>
+                <p>Pays d'origine : {{ country }}</p>
+                <p>Année de formation : {{ formation }}</p>
+                <p>Genre : {{ genre }}</p>
+                <a href="{{ archives }}">Lien de leur page Metal Archives</a>
+                <p class="foot-note">Image provenant de ... </p>
             </div>
         </div>
         <div class="col-sm-3"></div>
@@ -32,15 +34,55 @@
     <div class="row">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
-            <p>Introduction</p>
-            <p class="section-title">Section 1</p>
+            <p>Petite introduction</p>
+
+            <p class="section-title">Album 1 (année)</p>
+            <div class="note">
+                <p>Ma note : </p>
+                <div class="px-2">
+                    <!-- 
+                    Etoiles:
+                    complète <i class="fa-solid fa-star"></i>
+                    vide <i class="fa-regular fa-star"></i>
+                    remplie à moitié <i class="fa-solid fa-star-half-stroke"></i>
+                    -->
+                </div>
+            </div> 
             <img src="" alt="Image section 1">
+            <!--
+            Classes des images:
+            .large-img
+            .medium-img
+            .censor
+            -->
+            <p>Review</p>
+
+            <p class="section-title">Album 2 (année)</p>
+            <div class="note">
+                <p>Ma note : </p>
+                <div class="px-2">
+                    <!-- 
+                    Etoiles:
+                    complète <i class="fa-solid fa-star"></i>
+                    vide <i class="fa-regular fa-star"></i>
+                    remplie à moitié <i class="fa-solid fa-star-half-stroke"></i>
+                    -->
+                </div>
+            </div> 
+            <img src="" alt="Image section 2">
+            <!--
+            Classes des images:
+            .large-img
+            .medium-img
+            .censor
+            -->
+            <p>Review</p>
+
         </div>
         <div class="col-sm-3"></div>
     </div>
 
      <div class="row" id="footer"></div>
 </body>
-<script src="../../../src/js/general.js"></script>
-<script src="../../../src/js/posts.js"></script>
+<script src="../../src/js/general.js"></script>
 </html>

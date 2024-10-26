@@ -1,11 +1,7 @@
 <div class="post" onclick="window.location='{{ link }}';">
     <img src="{{ image }}" class="rounded">
     <h4>{{ title }}</h4>
-    <div class="categories mb-2">
-        {% for c in categories %}
-        <span class="badge bg-success">{{ c }}</span>
-        {% endfor %}
-    </div>
+    {{ rating }}
     <p>{{ description }}</p>
     <span class="date">{{ date }}</span>
 </div>
