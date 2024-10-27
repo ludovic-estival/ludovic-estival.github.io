@@ -5,6 +5,25 @@ To add a new post:
 */
 
 /* Part to modify  */
+var postLymphatic =
+`<div class="post" onclick="window.location='https://ludovic-estival.github.io/blog/2024/lymphatic-phlegm.html';">
+    <img src="https://www.metal-archives.com/images/3/2/8/8/3288_logo.gif" class="rounded">
+    <h4>Lymphatic Phlegm</h4>
+    <span class='badge bg-danger'>Hard</span>
+    <p>Groupe brézilien légendaire.</p>
+    <span class="date">27/10/2024</span>
+</div>
+`;
+
+var postPharmacist =
+`<div class="post" onclick="window.location='https://ludovic-estival.github.io/blog/2024/pharmacist.html';">
+    <img src="https://f4.bcbits.com/img/0019503318_10.jpg" class="rounded">
+    <h4>Pharmacist</h4>
+    <span class='badge bg-warning'>Medium</span>
+    <p>Un groupe que j'adore.</p>
+    <span class="date">26/10/2024</span>
+</div>
+`;
 
 var postGoregrind = 
 `<div class="post" onclick="window.location='https://ludovic-estival.github.io/blog/2024/goregrind.html';">
@@ -17,11 +36,15 @@ var postGoregrind =
 
 // Posts in 'index.html'
 var homePosts = [
+    postLymphatic,
+    postPharmacist,
     postGoregrind
 ]
 
 // Posts in '2024/all.html'
 var all2024Posts = [
+    postLymphatic,
+    postPharmacist,
     postGoregrind
 ]
 
