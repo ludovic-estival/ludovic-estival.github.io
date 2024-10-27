@@ -29,7 +29,7 @@ def create_post(json_file: str) -> None:
     rating = _create_rating_span(data["rating"])
 
     # --- Post --- #
-    file_path = f"/blog/{data["year"]}/{data["fileName"]}.html"
+    file_path = f"/blog/{data['year']}/{data['fileName']}.html"
     file = "../.." + file_path
 
     with open(file, mode="w", encoding="UTF-8") as f:
@@ -63,7 +63,7 @@ def create_post(json_file: str) -> None:
             )
         )
 
-    print(f"Post file generated in '{str(data["year"])}' folder.")
+    print(f"Post file generated in '{str(data['year'])}' folder.")
     print("Post card generated in 'out' folder.")
 
 
