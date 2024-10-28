@@ -1,10 +1,16 @@
-/*
-To add a new post:
-- create a new variable and copy/paste in it the generated post card
-- add this variable in corresponding array(s)
-*/
+/* Part to modify */
 
-/* Part to modify  */
+var postSerotonin =
+`<div class="post" onclick="window.location='https://ludovic-estival.github.io/blog/2024/serotonin-leakage.html';">
+    <img src="https://iili.io/2BRsfyX.jpg" class="rounded">
+    <h4>Serotonin Leakage</h4>
+    <span class='badge bg-success'>Easy</span>
+    <span class='badge bg-warning'>Medium</span>
+    <p>Un groupe qui propose du Goregrind avec du Black Metal et de l'ambient.</p>
+    <span class="date">27/10/2024</span>
+</div>
+`;
+
 var postLymphatic =
 `<div class="post" onclick="window.location='https://ludovic-estival.github.io/blog/2024/lymphatic-phlegm.html';">
     <img src="https://www.metal-archives.com/images/3/2/8/8/3288_logo.gif" class="rounded">
@@ -19,6 +25,7 @@ var postPharmacist =
 `<div class="post" onclick="window.location='https://ludovic-estival.github.io/blog/2024/pharmacist.html';">
     <img src="https://f4.bcbits.com/img/0019503318_10.jpg" class="rounded">
     <h4>Pharmacist</h4>
+    <span class='badge bg-success'>Easy</span>
     <span class='badge bg-warning'>Medium</span>
     <p>Un groupe que j'adore.</p>
     <span class="date">26/10/2024</span>
@@ -34,45 +41,116 @@ var postGoregrind =
 </div>
 `;
 
-// Posts in 'index.html'
+// Posts in 'index.html'- Max. 6 posts by default
 var homePosts = [
+    postSerotonin,
     postLymphatic,
     postPharmacist,
     postGoregrind
 ]
 
-// Posts in '2024/all.html'
+// Posts in '2024/all.html' - Max. 6 posts by default
 var all2024Posts = [
+    postSerotonin,
     postLymphatic,
     postPharmacist,
     postGoregrind
 ]
 
-/* Content load */
+/* End of part to modify */
 
-// Get id of post cards
 
-var container = document.getElementsByClassName("post-zone");
-var ids = [];
-for (let i = 0; i < container.length; i++) {
-    ids.push(container[i].attributes.id.nodeValue);
-}
-
-// Load post cards
 
 var url = window.location.href;
-var posts = undefined;
-
-if (url.includes("2024/all.html")) {
-    posts = all2024Posts;
-}
 
 if (url.includes("index.html") || url == "https://ludovic-estival.github.io/") {
-    posts = homePosts;
+
+    document.getElementById("head").innerHTML +=
+    `<link rel='stylesheet' type='text/css' href='src/css/general.css'>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    `;
+
+    loadCards(homePosts);
+
+} else {
+    document.getElementById("head").innerHTML +=
+    `<link rel='stylesheet' type='text/css' href='../../src/css/general.css'>
+    <link rel="icon" type="image/x-icon" href="../../favicon.ico">
+    `;
+
+    if (!url.includes("all.html")) {
+        document.getElementById("head").innerHTML += `<link rel='stylesheet' type='text/css' href='../../src/css/post.css'>`;
+    } else {
+
+        if (url.includes("2024")) {
+            loadCards(all2024Posts);
+        }
+    }
 }
 
-for (let i = 0; i < posts.length; i++) {
-    zoneId = ids[i];
-    postContent = posts[i];
-    document.getElementById(zoneId).innerHTML += postContent;
+
+/* Function for loading post cards */
+
+function loadCards(posts) {
+    var container = document.getElementsByClassName("post-zone");
+
+    // Get id of post cards
+    var ids = [];
+    for (let i = 0; i < container.length; i++) {
+        ids.push(container[i].attributes.id.nodeValue);
+    }
+
+    // Load post cards
+    
+    for (let i = 0; i < posts.length; i++) {
+        zoneId = ids[i];
+        postContent = posts[i];
+        document.getElementById(zoneId).innerHTML += postContent;
+    }
 }
+
+/* Append common elements */
+
+// Librairies
+document.getElementById("head").innerHTML +=
+`<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge'>
+<meta name='viewport' content='width=device-width, initial-scale=1'>
+<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css' rel='stylesheet'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css'
+    integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"/>
+`;
+
+// Header
+document.getElementById("body").innerHTML +=
+`<header>
+    <div class="header-left">
+        <h1>Un blog sur le metal</h1>
+        <h3>par Ludovic Estival</h3>
+    </div>
+    <div class="header-right">
+        <button><a href="https://ludovic-estival.github.io/index.html">Accueil</a></button>
+        <div class="dropdown">
+            <button>Posts <i class="fa-solid fa-chevron-down"></i></button>
+            <div class="dropdown-content">
+                <a href="https://ludovic-estival.github.io/blog/2024/all.html">2024</a>
+            </div>
+        </div>
+        <button><a href="https://ludovic-estival.github.io/about.html">A propos</a></button>
+    </div>
+</header>
+`;
+
+// Footer
+document.getElementById("footer").innerHTML +=
+`<div class="col-sm-4"></div>
+<div class="col-sm-4 footer mt-5">
+    <p>Un blog sur le metal par Ludovic Estival</p>
+    <a href="https://ludovic-estival.github.io/index.html">- Accueil</a>
+    <a href="https://ludovic-estival.github.io/about.html">- A propos</a>
+    <a href="https://github.com/ludovic-estival"><i class="fa-brands fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/ludovic-estival-a7bb5224b/"><i class="fa-brands fa-linkedin"></i></a>
+</div>
+<div class="col-sm-4"></div>
+`;
