@@ -1,7 +1,17 @@
 /* Part to modify */
 
+var postLDOH =
+`<div class="post" onclick="window.open('ttps://ludovic-estival.github.io/blog/2024/ldoh.html');">
+    <img src="https://iili.io/2BZ7k9S.jpg" class="rounded">
+    <h4>Last Days of Humanity</h4>
+    <span class='badge bg-warning'>Medium</span>
+    <p>Le premier groupe de Goregrind que j'ai découvert.</p>
+    <span class="date">28/10/2024</span>
+</div>
+`;
+
 var postSerotonin =
-`<div class="post" onclick="window.location='https://ludovic-estival.github.io/blog/2024/serotonin-leakage.html';">
+`<div class="post" onclick="window.open('https://ludovic-estival.github.io/blog/2024/serotonin-leakage.html');">
     <img src="https://iili.io/2BRsfyX.jpg" class="rounded">
     <h4>Serotonin Leakage</h4>
     <span class='badge bg-success'>Easy</span>
@@ -12,7 +22,7 @@ var postSerotonin =
 `;
 
 var postLymphatic =
-`<div class="post" onclick="window.location='https://ludovic-estival.github.io/blog/2024/lymphatic-phlegm.html';">
+`<div class="post" onclick="window.open('https://ludovic-estival.github.io/blog/2024/lymphatic-phlegm.html');">
     <img src="https://www.metal-archives.com/images/3/2/8/8/3288_logo.gif" class="rounded">
     <h4>Lymphatic Phlegm</h4>
     <span class='badge bg-danger'>Hard</span>
@@ -22,7 +32,7 @@ var postLymphatic =
 `;
 
 var postPharmacist =
-`<div class="post" onclick="window.location='https://ludovic-estival.github.io/blog/2024/pharmacist.html';">
+`<div class="post" onclick="window.open('https://ludovic-estival.github.io/blog/2024/pharmacist.html');">
     <img src="https://f4.bcbits.com/img/0019503318_10.jpg" class="rounded">
     <h4>Pharmacist</h4>
     <span class='badge bg-success'>Easy</span>
@@ -33,7 +43,7 @@ var postPharmacist =
 `;
 
 var postGoregrind = 
-`<div class="post" onclick="window.location='https://ludovic-estival.github.io/blog/2024/goregrind.html';">
+`<div class="post" onclick="window.open('https://ludovic-estival.github.io/blog/2024/goregrind.html');">
     <img src="https://iili.io/2q45W5F.png" alt="goregrind" class="rounded">
     <h4>Qu'est-ce que le Goregrind ?</h4>
     <p>Une explication de ce genre musical très spécial.</p>
@@ -43,6 +53,7 @@ var postGoregrind =
 
 // Posts in 'index.html'- Max. 6 posts by default
 var homePosts = [
+    postLDOH,
     postSerotonin,
     postLymphatic,
     postPharmacist,
@@ -51,6 +62,7 @@ var homePosts = [
 
 // Posts in '2024/all.html' - Max. 6 posts by default
 var all2024Posts = [
+    postLDOH,
     postSerotonin,
     postLymphatic,
     postPharmacist,
@@ -59,18 +71,18 @@ var all2024Posts = [
 
 /* End of part to modify */
 
-
-
 var url = window.location.href;
 
-if (url.includes("index.html") || url == "https://ludovic-estival.github.io/") {
+if (url.includes("index.html") || url.includes("about.html") || url == "https://ludovic-estival.github.io/") {
 
     document.getElementById("head").innerHTML +=
     `<link rel='stylesheet' type='text/css' href='src/css/general.css'>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     `;
 
-    loadCards(homePosts);
+    if(!url.includes("about.html")) {
+        loadCards(homePosts);
+    }
 
 } else {
     document.getElementById("head").innerHTML +=

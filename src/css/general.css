@@ -103,6 +103,11 @@ header {
     }
 }
 
+.warning {
+    color: red;
+    font-weight: bold;
+}
+
 /* Post card */
 
 .post {
