@@ -1,7 +1,7 @@
 /* Part to modify */
 
 var postLDOH =
-`<div class="post" onclick="window.open('ttps://ludovic-estival.github.io/blog/2024/ldoh.html');">
+`<div class="post" onclick="window.open('https://ludovic-estival.github.io/blog/2024/ldoh.html');">
     <img src="https://iili.io/2BZ7k9S.jpg" class="rounded">
     <h4>Last Days of Humanity</h4>
     <span class='badge bg-warning'>Medium</span>
