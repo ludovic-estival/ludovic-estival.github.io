@@ -1,8 +1,22 @@
 /* Part to modify */
 
+var postKiller = 
+`<div class="post" onclick="window.open('https://ludovic-estival.github.io/blog/2024/killer-klown.html');">
+    <div class="img">
+        <img src="https://www.metal-archives.com/images/3/5/4/0/3540486471_logo.jpg?4144" alt="killer klown">
+    </div>
+    <h4>Killer Klown</h4>
+    <span class='badge bg-success'>Easy</span>
+    <p>Idéal pour découvrir le Goregrind.</p>
+    <span class="date">31/10/2024</span>
+</div>
+`;
+
 var postLDOH =
 `<div class="post" onclick="window.open('https://ludovic-estival.github.io/blog/2024/ldoh.html');">
-    <img src="https://iili.io/2BZ7k9S.jpg" class="rounded">
+    <div class="img">
+        <img src="https://iili.io/2BZ7k9S.jpg">
+    </div>
     <h4>Last Days of Humanity</h4>
     <span class='badge bg-warning'>Medium</span>
     <p>Le premier groupe de Goregrind que j'ai découvert.</p>
@@ -12,7 +26,9 @@ var postLDOH =
 
 var postSerotonin =
 `<div class="post" onclick="window.open('https://ludovic-estival.github.io/blog/2024/serotonin-leakage.html');">
-    <img src="https://iili.io/2BRsfyX.jpg" class="rounded">
+    <div class="img">
+        <img src="https://iili.io/2BRsfyX.jpg">
+    </div>
     <h4>Serotonin Leakage</h4>
     <span class='badge bg-success'>Easy</span>
     <span class='badge bg-warning'>Medium</span>
@@ -23,7 +39,9 @@ var postSerotonin =
 
 var postLymphatic =
 `<div class="post" onclick="window.open('https://ludovic-estival.github.io/blog/2024/lymphatic-phlegm.html');">
-    <img src="https://www.metal-archives.com/images/3/2/8/8/3288_logo.gif" class="rounded">
+    <div class="img">
+        <img src="https://www.metal-archives.com/images/3/2/8/8/3288_logo.gif">
+    </div>
     <h4>Lymphatic Phlegm</h4>
     <span class='badge bg-danger'>Hard</span>
     <p>Groupe brézilien légendaire.</p>
@@ -33,7 +51,9 @@ var postLymphatic =
 
 var postPharmacist =
 `<div class="post" onclick="window.open('https://ludovic-estival.github.io/blog/2024/pharmacist.html');">
-    <img src="https://f4.bcbits.com/img/0019503318_10.jpg" class="rounded">
+    <div class="img">
+        <img src="https://f4.bcbits.com/img/0019503318_10.jpg">
+    </div>
     <h4>Pharmacist</h4>
     <span class='badge bg-success'>Easy</span>
     <span class='badge bg-warning'>Medium</span>
@@ -44,7 +64,9 @@ var postPharmacist =
 
 var postGoregrind = 
 `<div class="post" onclick="window.open('https://ludovic-estival.github.io/blog/2024/goregrind.html');">
-    <img src="https://iili.io/2q45W5F.png" alt="goregrind" class="rounded">
+    <div class="img">    
+        <img src="https://iili.io/2q45W5F.png" alt="goregrind">
+    </div>
     <h4>Qu'est-ce que le Goregrind ?</h4>
     <p>Une explication de ce genre musical très spécial.</p>
     <span class="date">26/10/2024</span>
@@ -53,6 +75,7 @@ var postGoregrind =
 
 // Posts in 'index.html'- Max. 6 posts by default
 var homePosts = [
+    postKiller,
     postLDOH,
     postSerotonin,
     postLymphatic,
@@ -62,6 +85,7 @@ var homePosts = [
 
 // Posts in '2024/all.html' - Max. 6 posts by default
 var all2024Posts = [
+    postKiller,
     postLDOH,
     postSerotonin,
     postLymphatic,

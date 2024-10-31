@@ -141,6 +141,14 @@ header {
     font-size: 17px;
 }
 
+.img {
+    background-color: white;
+    width: 346px;
+    height: 251.8px;
+    display: block;
+    margin: auto;
+}
+
 /* Footer */
 
 .footer {
