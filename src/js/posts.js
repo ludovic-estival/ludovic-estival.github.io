@@ -1,5 +1,18 @@
 /* Part to modify */
 
+var postDivers =
+`<div class="post" onclick="window.open('https://ludovic-estival.github.io/blog/2024/divers.html');">
+    <div class="img">
+        <img src="https://iili.io/2nr7Wox.png">
+    </div>
+    <h4>Albums divers</h4>
+    <span class='badge bg-success'>Easy</span>
+    <span class='badge bg-warning'>Medium</span>
+    <p>Une liste d'albums à découvrir.</p>
+    <span class="date">01/11/2024</span>
+</div>
+`;
+
 var postKiller = 
 `<div class="post" onclick="window.open('https://ludovic-estival.github.io/blog/2024/killer-klown.html');">
     <div class="img">
@@ -75,16 +88,17 @@ var postGoregrind =
 
 // Posts in 'index.html'- Max. 6 posts by default
 var homePosts = [
+    postDivers,
     postKiller,
     postLDOH,
     postSerotonin,
     postLymphatic,
-    postPharmacist,
-    postGoregrind
+    postPharmacist
 ]
 
 // Posts in '2024/all.html' - Max. 6 posts by default
 var all2024Posts = [
+    postDivers,
     postKiller,
     postLDOH,
     postSerotonin,
