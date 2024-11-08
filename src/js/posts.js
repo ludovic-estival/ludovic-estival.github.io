@@ -8,7 +8,8 @@ var postDivers =
     <h4>Albums divers</h4>
     <span class='badge bg-success'>Easy</span>
     <span class='badge bg-warning'>Medium</span>
-    <p>Une liste d'albums à découvrir.</p>
+    <span class='badge bg-info'>Goregrind</span>
+    <p>Une liste d'albums de Goregrind à découvrir.</p>
     <span class="date">01/11/2024</span>
 </div>
 `;
@@ -20,6 +21,7 @@ var postKiller =
     </div>
     <h4>Killer Klown</h4>
     <span class='badge bg-success'>Easy</span>
+    <span class='badge bg-info'>Goregrind</span>
     <p>Idéal pour découvrir le Goregrind.</p>
     <span class="date">31/10/2024</span>
 </div>
@@ -32,6 +34,7 @@ var postLDOH =
     </div>
     <h4>Last Days of Humanity</h4>
     <span class='badge bg-warning'>Medium</span>
+    <span class='badge bg-info'>Goregrind</span>
     <p>Le premier groupe de Goregrind que j'ai découvert.</p>
     <span class="date">28/10/2024</span>
 </div>
@@ -45,6 +48,7 @@ var postSerotonin =
     <h4>Serotonin Leakage</h4>
     <span class='badge bg-success'>Easy</span>
     <span class='badge bg-warning'>Medium</span>
+    <span class='badge bg-info'>Goregrind / Black Metal</span>
     <p>Un groupe qui propose du Goregrind avec du Black Metal et de l'ambient.</p>
     <span class="date">27/10/2024</span>
 </div>
@@ -57,6 +61,7 @@ var postLymphatic =
     </div>
     <h4>Lymphatic Phlegm</h4>
     <span class='badge bg-danger'>Hard</span>
+    <span class='badge bg-info'>Goregrind</span>
     <p>Groupe brézilien légendaire.</p>
     <span class="date">27/10/2024</span>
 </div>
@@ -70,6 +75,7 @@ var postPharmacist =
     <h4>Pharmacist</h4>
     <span class='badge bg-success'>Easy</span>
     <span class='badge bg-warning'>Medium</span>
+    <span class='badge bg-info'>Goregrind / Death Metal</span>
     <p>Un groupe que j'adore.</p>
     <span class="date">26/10/2024</span>
 </div>

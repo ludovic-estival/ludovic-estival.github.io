@@ -27,6 +27,7 @@ def create_post(json_file: str) -> None:
         _validate_json(data)
 
     rating = _create_rating_span(data["rating"])
+    genre = "<span class='badge bg-info'>" + data["genre"] + "</span>"
 
     # --- Post --- #
     file_path = f"/blog/{data['year']}/{data['fileName']}.html"
@@ -42,7 +43,7 @@ def create_post(json_file: str) -> None:
                 country=data["country"],
                 formation=data["formation"],
                 archives=data["metalArchives"],
-                genre=data["genre"],
+                genre=genre,
             )
         )
 
@@ -60,6 +61,7 @@ def create_post(json_file: str) -> None:
                 rating=rating,
                 description=data["description"],
                 date=data["date"],
+                genre=genre
             )
         )
 
