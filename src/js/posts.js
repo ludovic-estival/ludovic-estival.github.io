@@ -1,11 +1,24 @@
 /* Part to modify */
 
-var postDivers =
-`<div class="post" onclick="window.open('https://ludovic-estival.github.io/blog/2024/divers.html');">
+var postDiversBlack =
+`<div class="post" onclick="window.open('https://ludovic-estival.github.io/blog/2024/divers-black.html');">
     <div class="img">
-        <img src="https://iili.io/2nr7Wox.png">
+        <img src="https://iili.io/2uU5Mej.png">
     </div>
-    <h4>Albums divers</h4>
+    <h4>Albums Black Metal</h4>
+    <span class='badge bg-success'>Easy</span>
+    <span class='badge bg-info'>Black Metal</span>
+    <p>Une liste d'albums divers de Black Metal.</p>
+    <span class="date">13/11/2024</span>
+</div>
+`
+
+var postDiversGoregrind =
+`<div class="post" onclick="window.open('https://ludovic-estival.github.io/blog/2024/divers-goregrind.html');">
+    <div class="img">
+        <img src="https://iili.io/2uU55zl.png">
+    </div>
+    <h4>Albums Goregrind</h4>
     <span class='badge bg-success'>Easy</span>
     <span class='badge bg-warning'>Medium</span>
     <span class='badge bg-info'>Goregrind</span>
@@ -94,17 +107,18 @@ var postGoregrind =
 
 // Posts in 'index.html'- Max. 6 posts by default
 var homePosts = [
-    postDivers,
+    postDiversBlack,
+    postDiversGoregrind,
     postKiller,
     postLDOH,
     postSerotonin,
-    postLymphatic,
-    postPharmacist
+    postLymphatic
 ]
 
 // Posts in '2024/all.html' - Max. 6 posts by default
 var all2024Posts = [
-    postDivers,
+    postDiversBlack,
+    postDiversGoregrind,
     postKiller,
     postLDOH,
     postSerotonin,
