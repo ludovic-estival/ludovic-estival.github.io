@@ -13,6 +13,8 @@ This will create:
 - the post that you can start to edit
 - the post card that you need to copy/paste in `posts.js`
 
+[Images free host](https://freeimage.host/ludovicestival)
+
 ## JSON data of a post
 
 Example of JSON file, all fields are required:
